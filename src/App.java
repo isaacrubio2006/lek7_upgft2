@@ -39,11 +39,32 @@ public class App {
         {
             System.out.println(" dags att vakna upp");
         }
-        else if(klockan>12)
+        else if(klockan>=12 && klockan<23)
         {
             System.out.println("Dags att äta");
         }
+    
+        else if(klockan>=23)
+        {
+            System.out.println("dags att gå och lägga sig");
+        }
+
+        // E uppgift
+        System.out.println("Vad är din ålder: ");
+        int ålder= tangentbord.nextInt(); 
+        System.out.println("Är du medlem: ");
+        tangentbord.nextLine();
+        String svar = tangentbord.nextLine();
         
+        if(ålder>=18 && svar.equalsIgnoreCase("ja"))
+        {
+            System.out.println("Du får komma in");
+        }
+        else 
+        {
+            System.out.println("Du får ej inträde");
+        }
+
        
     }
 }
